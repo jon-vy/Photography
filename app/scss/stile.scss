@@ -1,0 +1,302 @@
+@import "vars"; /* почему без подчёркивания https://youtu.be/1sNhSXgsBPY?t=622 */
+@import "libs"; /* а в имени файла подчёркивание есть */
+@import "fonts";
+@import "global";
+
+/* start header */
+header {
+  background-image: url(../images/header-bg.jpg);
+  color: #0000ff;
+}
+.header-nav {
+  
+  a {
+    
+  }
+}
+.title-brush {
+  font-size: 76px;
+  font-family: "Brushwell";
+}
+.logo {
+  width: 100px;
+}
+.header__line {
+  width: 350px;
+  height: 1px;
+  background-color: #fff;
+  margin: 30px auto;
+}
+
+.header-text {
+  margin: 0 auto;
+  width: 75%;
+  padding-bottom: 80px;
+}
+.header-menu {
+  font-size: 19px;
+}
+/* end header */
+
+/* start about */
+
+.about {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  padding: 70px;
+  border: 50px solid transparent;
+  border-image: radial-gradient(green 65%, #0df309 100%) 10; /* устанавливаем круговой градиент, который будет использован в качестве границы-изображения  */
+}
+.about__photo {
+  padding: 30px;
+  img {
+    width: 310px;
+    border-radius: 50%;
+  }
+}
+.about__line {
+  width: 1px;
+  height: 370px;
+  background-color: #000;
+  margin: 0 30px;
+}
+.about__right {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+
+  button {
+    width: 230px;
+  }
+}
+
+/* end about */
+
+/* start portfolio */
+.portfolio {
+  background-image: url(../images/portfolio-bg.png);
+  background-size: cover;
+  padding: 30px;
+  button {
+    margin: 60px 0 30px;
+  }
+}
+.portfolio__title-brush {
+  font-size: 76px;
+  color: #fff;
+  font-family: "Brushwell";
+}
+.portfolio__line {
+  width: 670px;
+  height: 1px;
+  background-color: #fff;
+  margin: 0 auto 20px;
+}
+/* end portfolio */
+/* start photo-sleder */
+.photo-sleder {
+  background: #0e8ef2;
+  background: linear-gradient(to bottom, #0e8ef2, #52e55f);
+}
+
+.photo-sleder__inner {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.sleder__img {
+  float: left;
+  border: 1px double skyblue;
+  border-radius: 10px;
+  width: 300px;
+  margin: 10px;
+}
+/* end photo-sleder */
+
+/* start video */
+
+.video__header {
+  background-image: url(../images/video-bg.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+}
+.video__title {
+  color: #0000ff;
+}
+.video__line {
+  width: 250px;
+  height: 2px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.video__descr {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.video__player {
+  iframe {
+    width: 940px;
+    height: 510px;
+    background-color: #0df309;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+.video__embed {
+  width: 940px;
+}
+.video__thumb {
+  img {
+    width: 360px;
+    margin: 0 auto;
+  }
+  img:hover {
+    cursor: pointer;
+  }
+
+  .slick-center {
+    background-color: #0df309;
+    border-radius: 10px;
+  }
+  .slider-arrows {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid red;
+    border-radius: 100%;
+    background-color: rgba(10, 250, 62, 0.43);
+    z-index: 1;
+  }
+  .slider-arrows:hover {
+    cursor: pointer;
+    background-color: rgba(10, 250, 62, 1);
+  }
+  .slider-arrows__Left {
+    left: 5px;
+  }
+  .slider-arrows__Right {
+    right: 5px;
+  }
+}
+.video__line-end {
+  width: 90%;
+  height: 1px;
+  background-color: #000;
+  margin: 50px auto 0;
+}
+
+/* end video */
+
+/* start testimonials */
+.testimonials {
+  padding: 45px;
+}
+.testimonials__inner {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sub-title {
+  margin: 30px;
+}
+.testimonials__item {
+  position: relative;
+  margin: 200px auto 25px;
+  width: 330px;
+  border: 1px solid #000000;
+}
+.testimonials__photo {
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  img {
+    width: 200px;
+  }
+}
+.testimonials__txt {
+  padding: 40px;
+}
+.testimonials__title-txt {
+  font-size: 19px;
+  margin: 80px auto 25px;
+}
+/* end testimonials */
+
+/* start contact */
+.contact {
+  background-image: url(../images/contact-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 130px;
+  form {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    label {
+      padding-bottom: 10px;
+    }
+    input {
+      padding-bottom: 20px;
+    }
+  }
+}
+.contact__txt {
+  padding-bottom: 20px;
+}
+.contact__sub-title {
+  margin: 0 30px 30px 30px;
+}
+.contact__wrap {
+  display: flex;
+  justify-content: center;
+
+}
+.contact__form {
+  width: 360px;
+  padding-right: 15px;
+  text-align: left;
+}
+.contact__photo {
+padding-left: 15px;
+  img {
+    width: 445px;
+  }
+}
+/* end contact */
+/* end footer */
+.footer {
+  background-image: url(../images/footer-bg.jpg);
+  color: #fff;
+}
+.footer-menu {
+  font-size: 16px;
+}
+.footer__soshial {
+  img {
+    width: 50px;
+    margin: 0 10px 50px;
+  }
+}
+.footer__txt {
+  width: 600px;
+  margin: 0 auto 40px;
+}
+
+.footer__copy {
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+
+/* end footer */
+
+@import "media";

@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 19px;
+  font-family: "LouisGeorgeCafe";
+}
+.content {
+  border: 1px solid #000;
+  max-width: 1366px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* start nav */
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0 60px;
+  a {
+    text-decoration: none;
+    margin: 15px;
+    color: #fff;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+.wrap-search {
+  input {
+    display: none;
+    transition: 1s;
+    opacity: 0;
+  }
+}
+.search-img {
+  width: 20px;
+  margin-bottom: -5px;
+}
+/* end nav */
+.title-brush {
+  font-size: 76px;
+  font-family: "Brushwell";
+}
+
+.title {
+  font-size: 67px;
+  color: #024616;
+  line-height: 115px;
+  font-family: "RedVelvet-Regular";
+}
+.sub-title {
+  font-size: 37px;
+  font-family: '10691';
+}
