@@ -139,46 +139,34 @@ $(document).ready(function() {
 
 
 
-$('.video__player').slick({
-  infinite: true,
-	slidesToShow: 1,
-	arrows: false,
-	slidesToScroll: 1,
-	
-	asNavFor: '.video__thumb'
-
-});
 
 $('.video__thumb').slick({
   infinite: true,
   slidesToShow: 3,
 	slidesToScroll: 1,
 	centerMode: true,
-	asNavFor: '.video__player',
 	prevArrow: '<img class="slider-arrows slider-arrows__Left" src="images/arrows-left.svg" alt=""></img>', /*  стрелки  */
   nextArrow: '<img class="slider-arrows slider-arrows__Right" src="images/arrows-right.svg" alt=""></img>' /* слайдера */
 	
 });
-/* $("[data-slick-index='1']").click(function() {
-	$(".thumb").width(100 + 'px');
-}); */
-/* $( "#img" ).click(function() {
-
-alert( $("#img").attr("src") );
-
-}); */
 
 
-/* var slickindex;
-$('.slick-slide').click(function(){
-	slickindex = $(this).attr("data-slick-index");
-	$('.slick-slide').removeClass('slick-center');
+
+
+
+
+
+
+
+/*  */
+
+function video(e) {
 	
-	setTimeout(function () {
-		$("[data-slick-index='1']").addClass('slick-current' + ' slick-active' + ' slick-center');
-		}, 1000);
+	let vid = event.srcElement.currentSrc; /* получаю урл картинки */
+	let arr = vid.split('/');/* разбиваю урл на состовляющие, разделитель / */
+	/* console.log(arr[4]); это id видео*/
+	let str_iframe = '<iframe src="https://www.youtube.com/embed/' + arr[4] + '?autoplay=0&loop=1&&playlist=Video_ID" </iframe>';
+	document.getElementById('video__embed').innerHTML = str_iframe;
 
-console.log(slickindex);
-
-}); */
-/* console.log( $(this).attr("data-slick-index")); */
+	
+}

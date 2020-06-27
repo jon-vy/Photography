@@ -8,12 +8,7 @@ header {
   background-image: url(../images/header-bg.jpg);
   color: #0000ff;
 }
-.header-nav {
-  
-  a {
-    
-  }
-}
+
 .title-brush {
   font-size: 76px;
   font-family: "Brushwell";
@@ -128,27 +123,28 @@ header {
 .video__title {
   color: #0000ff;
 }
-.video__line {
-  width: 250px;
-  height: 2px;
-  background-color: #fff;
-  margin: 0 auto;
-}
+
 .video__descr {
   max-width: 600px;
   margin: 0 auto;
 }
+.video__slider {
+  background-image: url(../images/5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .video__player {
-  iframe {
-    width: 940px;
-    height: 510px;
-    background-color: #0df309;
+  position: relative;
+   iframe {
+    width: 854px;
+    height: 480px;
     padding: 20px;
-    border-radius: 10px;
   }
 }
 .video__embed {
-  width: 940px;
+  width: 954px;
+  margin: 0 auto;
 }
 .video__thumb {
   img {
@@ -159,12 +155,8 @@ header {
     cursor: pointer;
   }
 
-  .slick-center {
-    background-color: #0df309;
-    border-radius: 10px;
-  }
   .slider-arrows {
-    width: 50px;
+    width: 150px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
