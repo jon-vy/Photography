@@ -14,10 +14,19 @@ body {
   text-align: center;
 }
 /* start nav */
+.wrap-search {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.search-img {
+  width: 20px;
+  cursor: pointer;
+}
+
+
+
 nav {
-  display: flex;
-  justify-content: center;
-  padding: 60px 0 60px;
   a {
     text-decoration: none;
     margin: 15px;
@@ -27,17 +36,85 @@ nav {
     text-decoration: underline;
   }
 }
-.wrap-search {
-  input {
-    display: none;
-    transition: 1s;
-    opacity: 0;
+.btn-menu {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0 60px;
+}
+.header-menu {
+
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 40px;
+ 
+}
+
+
+.toggle {
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  span,
+  span::before,
+  span::after {
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(8px, 22px);
+  }
+  span::before,
+  span::after {
+    content: "";
+    transition: 0.5s;
+  }
+  span::before {
+    transform: translateY(-7px);
+  }
+  span::after {
+    transform: translateY(7px);
   }
 }
-.search-img {
-  width: 20px;
-  margin-bottom: -5px;
+.header-menu {
+  display: flex;
+  justify-content: space-evenly;
+
 }
+#toggle {
+  /* position: absolute;
+  top: 30px; */
+  display: none;
+}
+#toggle:checked ~ .header-menu {
+  width: 105px;
+  transition: 0.5s;
+  background-color: rgba(10, 245, 104, 0.7);
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+#toggle:checked + label {
+  span {
+    height: 0;
+  }
+  span::before {
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+  span::after {
+    transform: rotate(-45deg);
+    transition: 0.5s;
+  }
+  
+}
+
 /* end nav */
 .title-brush {
   font-size: 76px;
@@ -52,5 +129,5 @@ nav {
 }
 .sub-title {
   font-size: 37px;
-  font-family: '10691';
+  font-family: "10691";
 }
