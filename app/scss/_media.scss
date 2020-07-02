@@ -80,7 +80,8 @@
   }
   .portfolio__descr {
     background-color: rgba(252, 3, 244, 0.48);
-    margin: 0 auto;
+    margin: 0 10px;
+    padding: 5px;
     line-height: 6vw;
     border-radius: 8px;
   }
@@ -130,5 +131,13 @@
     border: 20px solid transparent;
     border-image: radial-gradient(green 65%, #0df309 100%) 10;
   }
+}
+@media (max-width: 350px) {
+  .photo-sleder__inner {
+    margin: 0;
+  }
+  .sleder__img {
+    width: 280px;
+}
 }
 /*@media (max-width: px) {} */

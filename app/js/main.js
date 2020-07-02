@@ -188,7 +188,7 @@ function video(e) {
 
 
 
-/* Блок с размерами окна для удобства вёрстки */
+/* окно разработчика */
 function s() {
 	let w = document.body.clientWidth;
 let h = document.body.clientHeight;
@@ -215,5 +215,6 @@ handler = (function () {
     }, delay);
   };
 })();
-document.body.widthBefor = document.body.offsetWidth;  /* запоминает исходную ширину блока */
+document.body.widthBefor = document.body.offsetWidth;  /* запоминает исходную ширину окна */
 window.onresize = handler;   /*срабатывает при ресайзе окна браузера */
+/* окно разработчика */
