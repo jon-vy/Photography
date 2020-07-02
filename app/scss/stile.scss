@@ -29,13 +29,9 @@ header {
   padding-bottom: 80px;
 }
 
-
-
 .header-menu {
   font-size: 19px;
 }
-
-
 
 /* end header */
 
@@ -79,11 +75,16 @@ header {
 
 /* start portfolio */
 .portfolio {
+ 
   background-image: url(../images/portfolio-bg.png);
-  background-size: cover;
-  padding: 30px;
-  button {
-    margin: 60px 0 30px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ padding: 30px;
+   button {
+    margin: 15px auto;
   }
 }
 .portfolio__title-brush {
@@ -94,8 +95,8 @@ header {
 .portfolio__line {
   width: 670px;
   height: 1px;
-  background-color: #fff;
-  margin: 0 auto 20px;
+  background-color: red;
+  margin: 0 auto;
 }
 /* end portfolio */
 /* start photo-sleder */
@@ -142,7 +143,7 @@ header {
 
 .video__player {
   position: relative;
-   iframe {
+  iframe {
     width: 854px;
     height: 480px;
     padding: 20px;
@@ -257,7 +258,6 @@ header {
 .contact__wrap {
   display: flex;
   justify-content: center;
-
 }
 .contact__form {
   width: 360px;
@@ -265,7 +265,7 @@ header {
   text-align: left;
 }
 .contact__photo {
-padding-left: 15px;
+  padding-left: 15px;
   img {
     width: 445px;
   }
@@ -296,5 +296,20 @@ padding-left: 15px;
 }
 
 /* end footer */
+
+.tool {
+  position: fixed;
+  width: 80px;
+  height: 37px;
+  background-color: #fff;
+  border: 1px solid #000;
+  z-index: 999;
+  font-size: 14px;
+  top: 40px;
+  right: 10px;
+}
+
+
+
 
 @import "media";

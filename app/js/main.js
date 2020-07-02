@@ -167,6 +167,53 @@ function video(e) {
 	/* console.log(arr[4]); это id видео*/
 	let str_iframe = '<iframe src="https://www.youtube.com/embed/' + arr[4] + '?autoplay=0&loop=1&&playlist=Video_ID" </iframe>';
 	document.getElementById('video__embed').innerHTML = str_iframe;
-
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Блок с размерами окна для удобства вёрстки */
+function s() {
+	let w = document.body.clientWidth;
+let h = document.body.clientHeight;
+document.getElementById('w').innerHTML = 'ширина ' + w;
+document.getElementById('h').innerHTML = 'высота ' + h;
+/* console.log(w);
+console.log(h); */
+}
+handler = (function () {
+  var timer;
+  var delay = 1000; /*чтобы сильно не грузить браузер обработчик срабатывает с задержкой 1000мс после ресайза окна */
+ 
+   return function () {
+    
+    if (timer) { 
+      clearTimeout(timer); 
+    }
+    timer = setTimeout(function () {
+      if (document.body.offsetWidth != document.body.widthBefor) {
+        s();
+       
+      }
+      document.body.widthBefor = document.body.offsetWidth;
+    }, delay);
+  };
+})();
+document.body.widthBefor = document.body.offsetWidth;  /* запоминает исходную ширину блока */
+window.onresize = handler;   /*срабатывает при ресайзе окна браузера */
