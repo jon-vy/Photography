@@ -120,8 +120,10 @@ header {
 
 /* start video */
 
+
 .video__header {
   background-image: url(../images/video-bg.jpg);
+  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -129,6 +131,15 @@ header {
 }
 .video__title {
   color: #0000ff;
+  font-size: 67px;
+  font-family: "RedVelvet-Regular";
+}
+.video__line {
+  width: 353px;
+  height: 32px;
+  background-image: url(../images/p6vAyOnJ4gn5xU4XsT8V1rFnMDY.gif);
+  background-size: 100% 100% ;
+  margin: 0 auto;
 }
 
 .video__descr {
@@ -137,7 +148,7 @@ header {
 }
 .video__slider {
   background-image: url(../images/5.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
@@ -147,23 +158,25 @@ header {
     width: 854px;
     height: 480px;
     padding: 20px;
+    opacity: 0.8;
   }
 }
-.video__embed {
+/* .video__embed {
   width: 954px;
   margin: 0 auto;
-}
+} */
 .video__thumb {
   img {
-    width: 360px;
+    width: 95%;
     margin: 0 auto;
+    opacity: 0.8;
   }
   img:hover {
     cursor: pointer;
   }
 
   .slider-arrows {
-    width: 150px;
+    width: 15%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -296,21 +309,5 @@ header {
 }
 
 /* end footer */
-
-/* окно разработчика */
-.tool {
-  position: fixed;
-  width: 80px;
-  height: 37px;
-  background-color: #fff;
-  border: 1px solid #000;
-  z-index: 999;
-  font-size: 14px;
-  top: 40px;
-  right: 10px;
-}
-/* окно разработчика */
-
-
 
 @import "media";

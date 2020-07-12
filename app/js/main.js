@@ -146,7 +146,21 @@ $('.video__thumb').slick({
 	slidesToScroll: 1,
 	centerMode: true,
 	prevArrow: '<img class="slider-arrows slider-arrows__Left" src="images/arrows-left.svg" alt=""></img>', /*  стрелки  */
-  nextArrow: '<img class="slider-arrows slider-arrows__Right" src="images/arrows-right.svg" alt=""></img>' /* слайдера */
+	nextArrow: '<img class="slider-arrows slider-arrows__Right" src="images/arrows-right.svg" alt=""></img>', /* слайдера */
+	responsive: [
+						{
+							breakpoint: 650,
+							settings: {
+								slidesToShow: 2,
+							}
+						},
+						{
+							breakpoint: 360,
+							settings: {
+								slidesToShow: 1,
+							}
+						}
+					]
 	
 });
 
@@ -188,33 +202,3 @@ function video(e) {
 
 
 
-/* окно разработчика */
-function s() {
-	let w = document.body.clientWidth;
-let h = document.body.clientHeight;
-document.getElementById('w').innerHTML = 'ширина ' + w;
-document.getElementById('h').innerHTML = 'высота ' + h;
-/* console.log(w);
-console.log(h); */
-}
-handler = (function () {
-  var timer;
-  var delay = 1000; /*чтобы сильно не грузить браузер обработчик срабатывает с задержкой 1000мс после ресайза окна */
- 
-   return function () {
-    
-    if (timer) { 
-      clearTimeout(timer); 
-    }
-    timer = setTimeout(function () {
-      if (document.body.offsetWidth != document.body.widthBefor) {
-        s();
-       
-      }
-      document.body.widthBefor = document.body.offsetWidth;
-    }, delay);
-  };
-})();
-document.body.widthBefor = document.body.offsetWidth;  /* запоминает исходную ширину окна */
-window.onresize = handler;   /*срабатывает при ресайзе окна браузера */
-/* окно разработчика */
