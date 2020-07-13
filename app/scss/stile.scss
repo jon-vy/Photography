@@ -209,30 +209,32 @@ header {
 .testimonials {
   padding: 45px;
 }
-.testimonials__inner {
+/* .testimonials__inner {
   display: flex;
   justify-content: space-evenly;
-}
+} */
+
 .sub-title {
   margin: 30px;
 }
 .testimonials__item {
+  display: inline-block;
   position: relative;
-  margin: 200px auto 25px;
-  width: 330px;
+  margin: 272px auto 50px;
+  width: 400px;
   border: 1px solid #000000;
 }
 .testimonials__photo {
   position: absolute;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
   overflow: hidden;
-  top: -100px;
+  top: -265px;
   left: 50%;
   transform: translateX(-50%);
   img {
-    width: 200px;
+    width: 100%;
   }
 }
 .testimonials__txt {
@@ -247,7 +249,7 @@ header {
 /* start contact */
 .contact {
   background-image: url(../images/contact-bg.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   padding-bottom: 130px;
   form {

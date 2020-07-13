@@ -1,3 +1,4 @@
+
 @media (max-width: 1235px) {
   nav {
     a {
@@ -9,14 +10,8 @@
   }
 }
 
-/* @media (max-width: 1150px) {
-  .portfolio {
-    button {
-      margin: 20px 0 0;
-  }
-}
-}
- */
+
+
 @media (max-width: 970px) {
   .title {
     font-size: 6vw;
@@ -151,6 +146,19 @@
       padding: 0;
     }
   }
+}
+
+
+@media (max-width: 440px) {
+  .testimonials__item {
+    width: 284px;
+    margin: 197px auto 50px;
+}
+.testimonials__photo {
+  width: 270px;
+  height: 270px;
+  top: -178px;
+}
 }
 
 @media (max-width: 380px) {
