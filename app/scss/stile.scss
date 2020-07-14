@@ -209,10 +209,6 @@ header {
 .testimonials {
   padding: 45px;
 }
-/* .testimonials__inner {
-  display: flex;
-  justify-content: space-evenly;
-} */
 
 .sub-title {
   margin: 30px;
@@ -248,16 +244,17 @@ header {
 
 /* start contact */
 .contact {
-  background-image: url(../images/contact-bg.jpg);
+  background-image: url(../images/contact-bg1.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding-bottom: 130px;
+  padding: 70px 10px 100px;
+  color: aquamarine;
   form {
     display: flex;
     flex-direction: column;
     font-size: 14px;
     label {
-      padding-bottom: 10px;
+      padding-top: 10px;
     }
     input {
       padding-bottom: 20px;
@@ -281,8 +278,9 @@ header {
 }
 .contact__photo {
   padding-left: 15px;
+  width: 445px;
   img {
-    width: 445px;
+    width: 100%;
   }
 }
 /* end contact */

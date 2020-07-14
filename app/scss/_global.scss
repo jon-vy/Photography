@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+textarea {
+  resize: none; /* Запрещаем изменять размер */
+ } 
+ button {
+   cursor: pointer;
+ }
 body {
   font-size: 19px;
   font-family: "LouisGeorgeCafe";
