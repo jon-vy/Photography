@@ -75,15 +75,14 @@ header {
 
 /* start portfolio */
 .portfolio {
- 
   background-image: url(../images/portfolio-bg.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
- padding: 30px;
-   button {
+  padding: 30px;
+  button {
     margin: 15px auto;
   }
 }
@@ -120,7 +119,6 @@ header {
 
 /* start video */
 
-
 .video__header {
   background-image: url(../images/video-bg.jpg);
   background-size: 100% 100%;
@@ -138,7 +136,7 @@ header {
   width: 353px;
   height: 32px;
   background-image: url(../images/p6vAyOnJ4gn5xU4XsT8V1rFnMDY.gif);
-  background-size: 100% 100% ;
+  background-size: 100% 100%;
   margin: 0 auto;
 }
 
@@ -289,18 +287,18 @@ header {
   background-image: url(../images/footer-bg.jpg);
   color: #fff;
 }
-.footer-menu {
-  font-size: 16px;
-}
+
 .footer__soshial {
+  padding-top: 20px;
   img {
     width: 50px;
-    margin: 0 10px 50px;
+    margin: 10px;
   }
 }
 .footer__txt {
-  width: 600px;
-  margin: 0 auto 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
 }
 
 .footer__copy {
