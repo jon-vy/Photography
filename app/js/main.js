@@ -13,8 +13,6 @@ for( var i = 0; i < images_total_count; i++ ) {
 	images_clone.onerror = image_loaded;
 	images_clone.src = images[i].src;
 }
-console.log(images_total_count);
-console.log(images_loaded_count);
 
 function image_loaded() {
 	images_loaded_count++;
