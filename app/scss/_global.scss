@@ -3,6 +3,66 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* start preloader */
+
+.preloader-2 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 2;
+  transition: 1s all;
+  opacity: 0.9;
+  visibility: visible;
+  background-image: url(../images/1562239918_ddb90b86a4ae4d078ff4cf9b99c6ee5c.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+ .done {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+.loader{
+  width: 200px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* end preloader */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 textarea {
   resize: none; /* Запрещаем изменять размер */
  } 

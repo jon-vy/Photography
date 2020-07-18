@@ -1,3 +1,43 @@
+/* start preloader */
+var
+	images = document.images,
+	images_total_count = images.length,
+	images_loaded_count = 0, /* количество загруженных изображений */
+	preloader = document.getElementById('page-preloader'),
+	pers_display = document.getElementById('load_perc');
+
+/* проходим в цикле все изображения */
+for( var i = 0; i < images_total_count; i++ ) {
+	images_clone = new Image();
+	images_clone.onload = image_loaded;
+	images_clone.onerror = image_loaded;
+	images_clone.src = images[i].src;
+}
+console.log(images_total_count);
+console.log(images_loaded_count);
+
+function image_loaded() {
+	images_loaded_count++;
+	pers_display.innerHTML = 'loading site ' + (( (100 / images_total_count) * images_loaded_count) << 0)  + '%';
+	if (images_loaded_count >= images_total_count) {
+		setTimeout(function () {
+			if (!preloader.classList.contains('done')) /* если в preloader в его класс листе нет класса done,  */ {
+				preloader.classList.add('done');/*то он добавляется  */
+			}
+		}, 2000);
+	}
+}
+
+/* end preloader */
+
+
+
+
+
+
+
+
+
 var widthPhotoSleder = $('.photo-sleder').outerWidth(true);/* размер всего контейнера 
 console.log('размер контейнера' + ' = ' + widthPhotoSleder);*/
 
@@ -119,15 +159,15 @@ function alert_And_ResizeCode() {
 
 
 
-$(document).ready(function() {
-  $('.photo-sleder__inner').magnificPopup({
+$(document).ready(function () {
+	$('.photo-sleder__inner').magnificPopup({
 		delegate: 'a',
-		type:'image',
-		gallery:{
+		type: 'image',
+		gallery: {
 			enabled: true,
 			arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>'
 		}
-		
+
 	});
 });
 
@@ -141,27 +181,27 @@ $(document).ready(function() {
 
 
 $('.video__thumb').slick({
-  infinite: true,
-  slidesToShow: 3,
+	infinite: true,
+	slidesToShow: 3,
 	slidesToScroll: 1,
 	centerMode: true,
 	prevArrow: '<img class="slider-arrows slider-arrows__Left" src="images/arrows-left.svg" alt=""></img>', /*  стрелки  */
 	nextArrow: '<img class="slider-arrows slider-arrows__Right" src="images/arrows-right.svg" alt=""></img>', /* слайдера */
 	responsive: [
-						{
-							breakpoint: 650,
-							settings: {
-								slidesToShow: 2,
-							}
-						},
-						{
-							breakpoint: 360,
-							settings: {
-								slidesToShow: 1,
-							}
-						}
-					]
-	
+		{
+			breakpoint: 650,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{
+			breakpoint: 360,
+			settings: {
+				slidesToShow: 1,
+			}
+		}
+	]
+
 });
 
 
@@ -175,7 +215,7 @@ $('.video__thumb').slick({
 /*  */
 
 function video(e) {
-	
+
 	let vid = event.srcElement.currentSrc; /* получаю урл картинки */
 	let arr = vid.split('/');/* разбиваю урл на состовляющие, разделитель / */
 	/* console.log(arr[4]); это id видео*/
